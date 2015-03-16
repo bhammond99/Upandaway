@@ -1,0 +1,14 @@
+<h1>Up and Away</h1>
+<h4>Is the worlds premiere travel agency, connecting customers to their dream vacation. </h4>
+	<div>
+		<div> <p>Below are just some of the trips that our satidfied customers have embarked on with Up an Away: </p>
+
+			<ul>
+				<% @destinations.each do |destination| %>
+					<li><%= destination.city %>, <%= destination.country %></li>
+				<% end %>
+			</ul>
+			<h5>Plan your trip today</h5>		
+		</div>
+		<%= link_to 'New Destination', new_destination_path, class: "btn btn-success" %>
+	</div>	

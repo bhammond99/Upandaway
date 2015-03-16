@@ -1,0 +1,25 @@
+<h1>Welcome to Up And Away</h1>
+<h2>The world's premeire travel agency</h2>
+
+<%= image_tag "onthego2.jpeg", size: "300x183", alt: "travelpic" %> 
+<%= image_tag "onthego9.jpeg", size: "300x183", alt: "travelpic" %>
+<%= image_tag "onthego10.jpeg", size: "300x183", alt: "travelpic" %>
+
+<p>Here's a list of countries we fly to: </p>
+
+<ul>
+	<% @countries.each do |country| %>
+		<li><%= country %></li>
+	<% end %>
+</ul>
+
+<%= image_tag "flaag1.jpeg", size: "300x183", alt: "travelpic", id: "brazil", class: "country_flag" %>
+<%= image_tag "flaag2.jpeg", size: "300x183", alt: "travelpic", id: "unitedstates", class: "country_flag" %>
+<%= image_tag "flaag3.png", size: "300x183", alt: "travelpic", id: "japan", class: "country_flag" %>
+
+
+<h5>Plan your trip today</h5>		
+	<%= link_to 'New Destination', new_destination_path, class: "btn btn-success" %>
+
+
+
